@@ -34,10 +34,14 @@ A library for working with Abstract Syntax Trees.
 %prep
 %setup -q -n %{pkgname}-%{version}
 
+%build
+%__gem_helper spec
+
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{ruby_vendorlibdir}
+install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{ruby_specdir}}
 cp -a lib/* $RPM_BUILD_ROOT%{ruby_vendorlibdir}
+cp -p %{pkgname}-%{version}.gemspec $RPM_BUILD_ROOT%{ruby_specdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,3 +51,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.md README.YARD.md CHANGELOG.md LICENSE.MIT
 %{ruby_vendorlibdir}/ast.rb
 %{ruby_vendorlibdir}/ast
+%{ruby_specdir}/%{pkgname}-%{version}.gemspec
