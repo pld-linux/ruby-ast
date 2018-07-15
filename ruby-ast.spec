@@ -5,12 +5,12 @@
 %define	pkgname	ast
 Summary:	A library for working with Abstract Syntax Trees
 Name:		ruby-%{pkgname}
-Version:	1.1.0
-Release:	2
+Version:	2.4.0
+Release:	1
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
-# Source0-md5:	e70ba78dd5e0fb2191a2ee0df6f72801
+# Source0-md5:	32de813722684ea1dad7fefc676d0838
 URL:		http://github.com/whitequark/ast
 BuildRequires:	rpm-rubyprov
 BuildRequires:	rpmbuild(macros) >= 1.656
