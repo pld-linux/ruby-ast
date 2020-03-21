@@ -6,7 +6,7 @@
 Summary:	A library for working with Abstract Syntax Trees
 Name:		ruby-%{pkgname}
 Version:	2.4.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
